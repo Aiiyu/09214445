@@ -16,10 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+<<<<<<< HEAD
 from catalog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('UI/', views.UI),
     path('submit-score/', views.submit_score, name='submit_score'),  # 新增這行
+=======
+from catalog.views import score_list
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('scores/', score_list, name='score_list'),
+>>>>>>> 6b77fcc (新增 catalog 應用並更新路由 (ScoreSystem/urls.py))
 ]
