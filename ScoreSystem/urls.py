@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from catalog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('first/',temples.UI.html),
+    path('UI/', views.UI),
+    path('submit-score/', views.submit_score, name='submit_score'),  # 新增這行
 ]
